@@ -10,8 +10,8 @@ const Input = (props) => {
 
   const onEnterPush = (e) => {
     if (e.key === "Enter") {
-      inputRef.current.removeEventListener("blur", () => {props.onEditComplete(inputRef.current.value);});
       inputRef.current.blur();
+      inputRef.current.removeEventListener("blur", () => {props.onEditComplete(inputRef.current.value);});
     }
   };
 
