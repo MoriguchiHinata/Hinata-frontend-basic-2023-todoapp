@@ -5,20 +5,20 @@ import COLOR from "../../../variables/color"
 import FONT_FAMILY from "../../../variables/font_family"
 import TEXTS from "../../../variables/texts"
 
-const Input = (props) => {
+const Input = ({onEditComplete, defaultValue}) => {
   const inputRef = useRef(null);
 
   const onEnterPush = (e) => {
     if (e.key === "Enter") {
       inputRef.current.blur();
-      inputRef.current.removeEventListener("blur", () => {props.onEditComplete(inputRef.current.value);});
+      inputRef.current.removeEventListener("blur", () => {onEditComplete(inputRef.current.value);});
     }
   };
 
   useEffect(() => {
-    inputRef.current.value = props.defaultValue;
+    inputRef.current.value = defaultValue;
     inputRef.current.focus();
-    inputRef.current.addEventListener("blur", () => {props.onEditComplete(inputRef.current.value);});
+    inputRef.current.addEventListener("blur", () => {onEditComplete(inputRef.current.value);});
     inputRef.current.addEventListener("keydown", (e) => onEnterPush(e));
   }, []);
 
