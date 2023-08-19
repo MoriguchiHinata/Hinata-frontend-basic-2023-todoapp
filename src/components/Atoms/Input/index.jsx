@@ -5,30 +5,6 @@ import COLOR from "../../../variables/color"
 import FONT_FAMILY from "../../../variables/font_family"
 import TEXTS from "../../../variables/texts"
 
-
-// const Input = (props) => {
-//   const [value, setValue] = useState(props.defaultValue);
-
-//   const handleChange = (e) => {
-//     setValue(e.target.value);
-//   };
-
-//   const onEditComplete = (e) => {
-//     console.log("edit completed:" + e.target.value);
-//     e.currentTarget.blur();
-//   };
-
-//   return (
-//     <StyledInput
-//       type="text"
-//       value={value}
-//       onChange={(e) => handleChange(e)}
-//       onBlur={(e) => onEditComplete(e)}
-//       onKeyDown={(e) => {if (e.key === "Enter") onEditComplete(e)}}
-//     />
-//   );
-// };
-
 const Input = (props) => {
   const inputRef = useRef(null);
 
