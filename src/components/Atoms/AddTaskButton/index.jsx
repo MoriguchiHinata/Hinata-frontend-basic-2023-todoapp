@@ -21,6 +21,9 @@ const StyledButton = styled.button`
   border-radius: 12px;
   display: flex;
   flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
   gap: 10px;
   width: 126px;
   height: 24px;
