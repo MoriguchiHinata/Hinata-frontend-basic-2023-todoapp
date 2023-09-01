@@ -11,7 +11,7 @@ const Input = ({onEditComplete, defaultValue}) => {
   const onEnterPush = (e) => {
     if (e.key === "Enter") {
       inputRef.current.blur();
-      inputRef.current.removeEventListener("blur", () => {onEditComplete(inputRef.current.value);});
+      
     }
   };
 
