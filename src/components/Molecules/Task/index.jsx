@@ -57,6 +57,8 @@ const StyledNameAndButtonWrapper = styled.div`
   justiyfy-content: center;
   align-items: center;
   gap: 10px;
+  max-width: 214px;
+  width: 100%;
 `;
 
 const StyledTaskName = styled.div`
@@ -64,7 +66,6 @@ const StyledTaskName = styled.div`
   ${TEXTS.S}
   color: ${COLOR.LIGHT_GRAY};
   width: 100%;
-  max-width: 214px;
 `;
 
 const StyledEditButtonWrapper = styled.div`
