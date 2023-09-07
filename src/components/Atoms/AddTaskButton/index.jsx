@@ -1,18 +1,18 @@
 import React from "react";
 import styled from "styled-components";
-import plusImg from "../../../assets/svg/plus.svg"
-import COLOR from "../../../variables/color"
-import FONT_FAMILY from "../../../variables/font_family"
-import TEXTS from "../../../variables/texts"
+import plusImg from "../../../assets/svg/plus.svg";
+import COLOR from "../../../variables/color";
+import FONT_FAMILY from "../../../variables/font_family";
+import TEXTS from "../../../variables/texts";
 
-const AddTaskButton = ({onClick}) => {
+const AddTaskButton = ({ onClick }) => {
   return (
     <StyledButton onClick={onClick}>
-      <StyledImg src={plusImg}/>
+      <StyledImg src={plusImg} />
       <StyledText>タスクを追加</StyledText>
     </StyledButton>
   );
-}
+};
 export default AddTaskButton;
 
 const StyledButton = styled.button`
@@ -27,6 +27,7 @@ const StyledButton = styled.button`
   gap: 10px;
   width: 126px;
   height: 24px;
+  cursor: pointer;
 
   &:hover {
     background-color: ${COLOR.GREEN_TRANSLUCENT};

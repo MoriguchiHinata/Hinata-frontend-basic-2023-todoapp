@@ -1,12 +1,12 @@
 import React from "react";
 import styled from "styled-components";
 import pencil from "../../../assets/svg/pencil.svg";
-import COLOR from "../../../variables/color"
+import COLOR from "../../../variables/color";
 
-const EditButton = ({onClick}) => {
+const EditButton = ({ onClick }) => {
   return (
     <StyledButton onClick={onClick}>
-      <img src={pencil}/>
+      <img src={pencil} />
     </StyledButton>
   );
 };
@@ -21,12 +21,13 @@ const StyledButton = styled.button`
   width: 20px;
   height: 20px;
   transition: 0.2s;
+  cursor: pointer;
 
   &:hover {
     background: ${COLOR.LIGHT_GRAY_TRANSLUCENT};
     transition: 0.2s;
   }
-  
+
   & > img {
     width: 100%;
     height: 100%;

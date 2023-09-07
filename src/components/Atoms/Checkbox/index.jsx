@@ -1,17 +1,17 @@
 import React from "react";
 import styled from "styled-components";
-import checkImg from "../../../assets/svg/check.svg"
-import COLOR from "../../../variables/color"
-import FONT_FAMILY from "../../../variables/font_family"
-import TEXTS from "../../../variables/texts"
+import checkImg from "../../../assets/svg/check.svg";
+import COLOR from "../../../variables/color";
+import FONT_FAMILY from "../../../variables/font_family";
+import TEXTS from "../../../variables/texts";
 
-const Checkbox = ({onClick}) => {
+const Checkbox = ({ onClick }) => {
   return (
     <StyledButton onClick={onClick}>
       <img src={checkImg}></img>
     </StyledButton>
   );
-}
+};
 export default Checkbox;
 
 const StyledButton = styled.button`
@@ -21,6 +21,7 @@ const StyledButton = styled.button`
   padding: 0;
   width: 20px;
   height: 20px;
+  cursor: pointer;
 
   & > img {
     display: none;
