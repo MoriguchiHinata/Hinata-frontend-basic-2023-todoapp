@@ -37,6 +37,7 @@ const StyledInput = styled.input`
   border-radius: 2px;
   padding: 0px 4px;
   width: 100%;
+  max-width: 100%;
   height: 20px;
 
   &:focus {
