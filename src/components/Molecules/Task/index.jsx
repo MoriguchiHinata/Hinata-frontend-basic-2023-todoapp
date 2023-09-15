@@ -42,9 +42,12 @@ const Task = ({ onTaskChange, onTaskComplete, taskName, defaultIsEditing }) => {
 const StyledWrapper = styled.div`
   display: flex;
   flex-direction: row;
+  justify-content: start;
   align-items: center;
   gap: 10px;
   padding: 2px 6px;
+  width: 100%;
+  max-width: 100%;
 `;
 
 const SytledCheckboxWrapper = styled.div`
@@ -60,13 +63,17 @@ const StyledNameAndButtonWrapper = styled.div`
   align-items: center;
   gap: 10px;
   width: 100%;
+  min-width: 0;
 `;
 
 const StyledTaskName = styled.div`
   font-family: ${FONT_FAMILY.NOTO_SANS};
   ${TEXTS.S}
   color: ${COLOR.LIGHT_GRAY};
-  width: 100%;
+  flex: 1 1 auto;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
 `;
 
 const StyledEditButtonWrapper = styled.div`
