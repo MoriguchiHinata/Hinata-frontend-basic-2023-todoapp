@@ -1,4 +1,4 @@
-import { React, useState } from "react";
+import React, { useState } from "react";
 import Checkbox from "../../Atoms/Checkbox/index.jsx";
 import Input from "../../Atoms/Input/index.jsx";
 import EditButton from "../../Atoms/EditButton/index.jsx";

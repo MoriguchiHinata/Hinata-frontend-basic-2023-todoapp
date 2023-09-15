@@ -29,7 +29,7 @@ const StyledWrapper = styled.div`
 `;
 
 const StyledTodoCardWrapper = styled.div`
-  background-color: ${COLOR.DEEP_BLUE_GRAY};
+  background-color: ${COLOR.LIGHT_BLACK};
   border-radius: 4px;
   padding: 20px;
   width: 100%;
