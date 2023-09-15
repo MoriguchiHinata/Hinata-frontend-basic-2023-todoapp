@@ -7,7 +7,7 @@
   "license": "MIT",
   "scripts": {
     "sb": "start-storybook -p 6006 -s ./src",
-    "dev": "webpack serve --open --mode development",
+    "dev": "set NODE_OPTIONS=--openssl-legacy-provider && webpack serve --open --mode development",
     "build": "webpack --mode production",
     "build-storybook": "build-storybook -s ./src",
     "chromatic": "npx chromatic --project-token=072222ef1ac3"
