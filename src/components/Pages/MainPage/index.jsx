@@ -26,10 +26,15 @@ const StyledWrapper = styled.div`
   justify-content: center;
   align-items: center;
   gap: 10px;
+  padding: 60px 0 0 0;
+
+  @media (max-width: ${BREAKPOINT.MEDIUM}) {
+    padding: 20px 0 0 0;
+  }
 `;
 
 const StyledTodoCardWrapper = styled.div`
-  background-color: ${COLOR.DEEP_BLUE_GRAY};
+  background-color: ${COLOR.LIGHT_BLACK};
   border-radius: 4px;
   padding: 20px;
   width: 100%;

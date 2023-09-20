@@ -1,4 +1,4 @@
-import { React, useState } from "react";
+import React, { useState } from "react";
 import BREAKPOINT from "../../../variables/breakpoint";
 import COLOR from "../../../variables/color";
 import FONT_FAMILY from "../../../variables/font_family";
