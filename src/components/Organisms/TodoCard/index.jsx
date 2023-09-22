@@ -10,15 +10,20 @@ import Task from "../../Molecules/Task";
 const TodoCard = () => {
   const [taskList, setTaskList] = useState([]);
 
-  const todoStorageKey = "todoKey";
+  const TODO_STORAGE_KEY = "todoKey";
+  const DEFAULT_TASK_LIST = [];
 
   useEffect(() => {
-    const storedTaskList = localStorage.getItem(todoStorageKey);
-    setTaskList(JSON.parse(storedTaskList));
+    const storedTaskList = localStorage.getItem(TODO_STORAGE_KEY);
+    if (storedTaskList === null) {
+      setTaskList(DEFAULT_TASK_LIST);
+    } else {
+      setTaskList(JSON.parse(storedTaskList));
+    }
   }, []);
 
   useEffect(() => {
-    localStorage.setItem(todoStorageKey, JSON.stringify(taskList));
+    localStorage.setItem(TODO_STORAGE_KEY, JSON.stringify(taskList));
   }, [taskList]);
 
   const onAddTaskButtonClick = () => {
