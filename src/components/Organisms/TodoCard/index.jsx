@@ -42,6 +42,7 @@ const TodoCard = () => {
       setTaskList(taskListCpy.filter((_, num) => num !== index));
     } else {
       taskListCpy[index].name = value;
+      taskListCpy[index].initializing = false;
       setTaskList(taskListCpy);
     }
   };
