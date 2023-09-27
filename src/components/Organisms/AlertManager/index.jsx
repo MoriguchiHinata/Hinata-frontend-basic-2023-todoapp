@@ -1,5 +1,5 @@
 import React from "react";
-import { useAlertHandlerContext } from "../../contexts/alert_handler";
+import { useAlertHandlerContext } from "../../../contexts/alert_handler";
 import Alert from "../../Atoms/Alert";
 import styled from "styled-components";
 

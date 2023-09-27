@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { useAlertHandlerContext } from "../../contexts/alert_handler";
+import { useAlertHandlerContext } from "../../../contexts/alert_handler";
 import BREAKPOINT from "../../../variables/breakpoint";
 import COLOR from "../../../variables/color";
 import FONT_FAMILY from "../../../variables/font_family";
