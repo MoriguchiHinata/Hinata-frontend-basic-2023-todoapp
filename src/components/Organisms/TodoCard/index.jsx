@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useAlertHandlerContext } from "../../contexts/alert_handler";
 import BREAKPOINT from "../../../variables/breakpoint";
 import COLOR from "../../../variables/color";
@@ -14,7 +14,6 @@ const TodoCard = () => {
 
   const TODO_STORAGE_KEY = "todoKey";
   const DEFAULT_TASK_LIST = [];
-  const AlertHandlerContext = useAlertHandlerContext();
 
   useEffect(() => {
     const storedTaskList = localStorage.getItem(TODO_STORAGE_KEY);
