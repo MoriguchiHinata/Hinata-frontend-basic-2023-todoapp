@@ -15,8 +15,10 @@ const StyledText = styled.div`
   font-family: ${FONT_FAMILY.ROBOTO};
   ${TEXTS.L};
   color: ${COLOR.WHITE};
+  padding: 60px 0 0 0;
 
   @media (max-width: ${BREAKPOINT.MEDIUM}) {
     ${TEXTS.M}
+    padding: 60px 0 0 0;
   }
 `;

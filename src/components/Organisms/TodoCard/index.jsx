@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import BREAKPOINT from "../../../variables/breakpoint";
 import COLOR from "../../../variables/color";
 import FONT_FAMILY from "../../../variables/font_family";
@@ -9,6 +9,22 @@ import Task from "../../Molecules/Task";
 
 const TodoCard = () => {
   const [taskList, setTaskList] = useState([]);
+
+  const TODO_STORAGE_KEY = "todoKey";
+  const DEFAULT_TASK_LIST = [];
+
+  useEffect(() => {
+    const storedTaskList = localStorage.getItem(TODO_STORAGE_KEY);
+    if (storedTaskList === null) {
+      setTaskList(DEFAULT_TASK_LIST);
+    } else {
+      setTaskList(JSON.parse(storedTaskList));
+    }
+  }, []);
+
+  useEffect(() => {
+    localStorage.setItem(TODO_STORAGE_KEY, JSON.stringify(taskList));
+  }, [taskList]);
 
   const onAddTaskButtonClick = () => {
     setTaskList([...taskList, { name: "", initializing: true }]);
@@ -26,6 +42,7 @@ const TodoCard = () => {
       setTaskList(taskListCpy.filter((_, num) => num !== index));
     } else {
       taskListCpy[index].name = value;
+      taskListCpy[index].initializing = false;
       setTaskList(taskListCpy);
     }
   };
