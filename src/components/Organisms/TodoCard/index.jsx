@@ -10,6 +10,7 @@ import Task from "../../Molecules/Task";
 
 const TodoCard = () => {
   const [taskList, setTaskList] = useState([]);
+  const AlertHandlerContext = useAlertHandlerContext();
 
   const TODO_STORAGE_KEY = "todoKey";
   const DEFAULT_TASK_LIST = [];
