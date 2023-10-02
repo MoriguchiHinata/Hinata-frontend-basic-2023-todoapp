@@ -22,7 +22,8 @@ export const AlertHandlerProvider = ({ children }) => {
   };
 
   const contextValue = {
-    alertState,
+    visible: alertState.visible,
+    errorText: alertState.errorText,
     setAlert: setAlert,
     closeAlert: closeAlert,
   };
