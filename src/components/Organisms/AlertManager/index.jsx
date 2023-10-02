@@ -9,8 +9,8 @@ const AlertManager = () => {
   return (
     <AlertWrapper>
       <Alert
-        isActive={AlertHandlerContext.visible}
-        alertText={AlertHandlerContext.errorText}
+        isActive={AlertHandlerContext.alertState.visible}
+        alertText={AlertHandlerContext.alertState.errorText}
       />
     </AlertWrapper>
   );
