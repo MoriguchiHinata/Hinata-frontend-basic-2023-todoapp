@@ -4,14 +4,11 @@ import Alert from "../../Atoms/Alert";
 import styled from "styled-components";
 
 const AlertManager = () => {
-  const AlertHandlerContext = useAlertHandlerContext();
+  const { visible, errorText } = useAlertHandlerContext();
 
   return (
     <AlertWrapper>
-      <Alert
-        isActive={AlertHandlerContext.visible}
-        alertText={AlertHandlerContext.errorText}
-      />
+      <Alert isActive={visible} alertText={errorText} />
     </AlertWrapper>
   );
 };
