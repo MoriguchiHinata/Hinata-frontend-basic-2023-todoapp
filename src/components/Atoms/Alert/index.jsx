@@ -6,8 +6,6 @@ import FONT_FAMILY from "../../../variables/font_family";
 import TEXTS from "../../../variables/texts";
 
 const Alert = ({ isActive, alertText }) => {
-  console.log(isActive);
-  console.log(alertText);
   return <StyledAlert isActive={isActive}>{alertText}</StyledAlert>;
 };
 
