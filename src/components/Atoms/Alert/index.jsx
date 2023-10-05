@@ -13,8 +13,6 @@ const StyledAlert = styled.div`
   opacity: ${({ isActive }) => (isActive ? `1` : `0`)};
   top: ${({ isActive }) => (isActive ? `80px` : `0px`)};
   position: absolute;
-  /* left: 50%;
-  transform: translate(-50%, 0); */
   transition: 0.5s ease-out;
   font-family: ${FONT_FAMILY.NOTO_SANS};
   color: ${COLOR.WHITE};
