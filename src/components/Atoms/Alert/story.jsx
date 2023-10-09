@@ -14,3 +14,7 @@ export default {
 const Template = (args) => <Component {...args} />;
 
 export const Default = Template.bind({});
+Default.args = {
+  alertText: "text",
+  isActive: true,
+};
