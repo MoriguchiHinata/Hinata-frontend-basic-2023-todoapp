@@ -18,10 +18,6 @@ const StyledAlert = styled.div`
   color: ${COLOR.WHITE};
   ${TEXTS.S}
   background-color: ${COLOR.RED};
-  display: flex;
-  flex-direction: row;
-  justify-content: start;
-  align-items: center;
   border-radius: 4px;
   padding: 10px 20px;
   width: 100%;
